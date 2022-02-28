@@ -160,6 +160,12 @@ footer {
         margin-left: 1vw;
         margin-right: 1vw;
         border-radius: 5px;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+    
+    .imagen:hover{
+        transform: scale(1.1);
     }
 
     .descripcion{
