@@ -19,9 +19,6 @@ body{
     background-color: white;
 }
 
-/*Crear carrusel de imagenes para algunas paginas -> usar grids para acomodar la informacion
-MIENTRAS TANTO USAR GRIDS PARA MOSTRAR LAS CASAS   */
-
 footer {
     margin-bottom: 0px;
     padding-top: 3%;
@@ -41,10 +38,71 @@ footer {
 
 .titulo{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: darkgray ;
+    background-color: darkgrey ;
     font-size: large;
     text-align: left;
     padding: 3vh;
+}
+
+a{
+    text-decoration: none;
+    color:blueviolet;
+}
+/* VER QUE COLOR QUEDA MEJOR 
+li{
+    text-decoration: none;
+    color:ghostwhite;
+}
+*/
+.division{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size:large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size:x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cuerpoDiscl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5vh;
+    margin-top: 5vh;
+}
+.cuerpoServ{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5vh;
+    margin-top: 5vh;
+}
+
+.cuerpoDise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5vh;
+    margin-top: 5vh;
+}
+
+.cuerpoCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5vh;
+    margin-top: 5vh;
 }
 
 @media screen and (min-width:0px) and (max-width:767px){
@@ -62,7 +120,7 @@ footer {
         display: grid;
         border: white  5px double;
         color: white;
-        background-color: gray;
+        background-color: rgb(41, 40, 40);
         list-style: none;
         font-size: large;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -146,7 +204,7 @@ footer {
         display: grid;
         border: white  5px double;
         color: white;
-        background-color: gray;
+        background-color: rgb(41, 40, 40);
         list-style: none;
         font-size: large;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -167,8 +225,9 @@ footer {
         transition-duration: 0.25s;
     }
     
-    .imagen:hover{
+    .imagen:hover{ /*ARREGLAR SUPERPOSICIÓN DE TARJETA (SOLUCIONADO)*/
         transform: scale(1.1);
+        z-index: 1;
     }
 
     .descripcion{
@@ -180,15 +239,7 @@ footer {
         margin-top: 2vh;
         text-align: center;
     }
-    .casa{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        margin-top: 3vh;
-        /*
-        padding-top: 3vh;*/
-    }
+    
     .cuerpo{
         display: grid;
         justify-items: center;
@@ -196,7 +247,17 @@ footer {
         grid-template-columns: 45vw 45vw;
         grid-template-rows: 100vh 100vh;
         grid-row-gap: 1vh;
-        grid-column-gap: 2vw;
+        grid-column-gap: 3vw;
+    }
+    
+    .cuerpoEmpre{
+        display:flex;
+        flex-direction: row;
+        column-gap: 3vw;
+        margin-left: 3vw;
+        margin-top: 3vh;
+        margin-right: 3vw;
+        align-items: center;
     }
     
 }
