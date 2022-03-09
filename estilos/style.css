@@ -1,263 +1,194 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+@charset "UTF-8";
+@media screen and (min-width: 768px) {
+  header {
+    background-color: #222121;
+    margin-top: 0;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 40% 52%;
+    /*arreglar logo no responsive*/ }
+    header .navegacion {
+      display: grid;
+      border: white  5px double;
+      color: white;
+      background-color: #292828;
+      list-style: none;
+      font-size: large;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      top: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 0,5fr;
+      justify-items: center;
+      align-items: center;
+      /*li hereda propiedades del padre*/ }
+  .imagen {
+    width: 45vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration: 0.25s; }
+    .imagen:hover {
+      /*ARREGLAR SUPERPOSICIÓN DE TARJETA (SOLUCIONADO)*/
+      transform: scale(1.1);
+      z-index: 1; }
+  .cuerpo {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 100vh 100vh;
+    grid-row-gap: 1vh;
+    grid-column-gap: 3vw; }
+  .cuerpoEmpre {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+    margin-left: 3vw;
+    margin-top: 3vh;
+    margin-right: 3vw;
+    align-items: center; } }
 
+* {
+  padding: 0;
+  margin: 0; }
 
 /*CAMBIAR COSAS OBSOLETAS POR EL BOOTSTRAP*/
+.capa {
+  /*al final no use una imagen por debajo, pero me gusto el tono que le dió*/
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(143, 138, 138, 0.253);
+  z-index: -1;
+  top: 0;
+  left: 0; }
 
-.capa{ /*al final no use una imagen por debajo, pero me gusto el tono que le dió*/
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba(143, 138, 138, 0.253);
-    z-index: -1;
-    top: 0;left: 0;
-}    
-
-body{
-    background-color: white;
-}
+body {
+  background-color: white; }
 
 footer {
-    margin-bottom: 0px;
-    padding-top: 3%;
-    background-color: rgb(22, 18, 18);
-    margin-top: 3%;
-    /*agregar redes sociales (usando flexbox )*/
-}
+  margin-bottom: 0px;
+  padding-top: 3%;
+  background-color: #161212;
+  margin-top: 3%;
+  /*agregar redes sociales (usando flexbox )*/ }
 
-.discl{
-    font-size: large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    justify-self: center;
-    align-self: center;
-}
+.discl {
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-self: center;
+  align-self: center; }
 
 /*AGREGAR ICONO (fixed) PARA VOLVER ARRIBA DE LA PÁGINA*/
+.titulo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: darkgrey;
+  font-size: large;
+  text-align: left;
+  padding: 3vh; }
 
-.titulo{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: darkgrey ;
-    font-size: large;
-    text-align: left;
-    padding: 3vh;
-}
+a {
+  text-decoration: none;
+  color: blueviolet; }
 
-a{
-    text-decoration: none;
-    color:blueviolet;
-}
 /* VER QUE COLOR QUEDA MEJOR 
 li{
     text-decoration: none;
     color:ghostwhite;
 }
 */
-.division{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size:large;
+.division {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.titulo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: x-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.cuerpoDiscl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5vh;
+  margin-top: 5vh; }
+
+.cuerpoServ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5vh;
+  margin-top: 5vh; }
+
+.cuerpoDise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5vh;
+  margin-top: 5vh; }
+
+.cuerpoCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5vh;
+  margin-top: 5vh; }
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  header {
+    background-color: #222121;
+    margin-top: 0;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 40% 52%;
+    /*Buscar un logo que entre en el header*/
+    /*BUSCAR ICONOS PARA HEADER Y FOOTER*/ }
+  .navegacion {
+    display: grid;
+    border: white  5px double;
+    color: white;
+    background-color: #292828;
+    list-style: none;
+    font-size: large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.titulo{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size:x-large;
+    top: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 0,5fr;
+    justify-items: center;
+    align-items: center; }
+  .imagen {
+    width: 80vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 5px; }
+  .cuerpo {
+    display: grid;
+    grid-template-rows: 40vh 40vh 40vh 40vh;
+    grid-row-gap: 4vh;
+    justify-content: center; }
+  .division {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.cuerpoDiscl{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 5vh;
-    margin-top: 5vh;
-}
-.cuerpoServ{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 5vh;
-    margin-top: 5vh;
-}
-
-.cuerpoDise{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 5vh;
-    margin-top: 5vh;
-}
-
-.cuerpoCont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 5vh;
-    margin-top: 5vh;
-}
-
-@media screen and (min-width:0px) and (max-width:767px){
-    header {
-        background-color: rgb(34, 33, 33);
-        margin-top: 0;
-        padding: 30px;
-        display: grid;
-        grid-template-rows: 40% 52%;
-        /*Buscar un logo que entre en el header*/
-        /*BUSCAR ICONOS PARA HEADER Y FOOTER*/
-    }
-    
-    .navegacion{
-        display: grid;
-        border: white  5px double;
-        color: white;
-        background-color: rgb(41, 40, 40);
-        list-style: none;
-        font-size: large;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        top: 30px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-column-gap: 0,5fr;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .casa{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        border-color:darkorange;
-        border-top: 3px solid;
-        margin-top: 3vh;
-        padding-top: 3vh;
-    }
-    
-    .descripcion{
-        width: 70vw;
-        height: fit-content;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: rgb(204, 148, 75);
-        border-radius: 5px;
-        margin-top: 2vh;
-        text-align: center;
-    }
-    
-    .imagen{
-        width: 80vw;
-        margin-left: 1vw;
-        margin-right: 1vw;
-        border-radius: 5px;
-    }
-    
-    .cuerpo{
-        display: grid;
-        grid-template-rows: 40vh 40vh 40vh 40vh;
-        grid-row-gap: 4vh;
-        justify-content: center;
-    }
-    
-    .division{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
-        border: 2px solid rgb(223, 164, 54);
-        margin-top:2vh;
-        margin-right: 3vw;
-        margin-left: 3vw;
-        height:fit-content;
-    }
-    .cuerpoServ{
-        display: grid;
-        grid-template-rows:  7vh 40vh 40vh 5vh 40vh 40vh;
-        grid-row-gap: 2vh;
-        justify-content: center;
-    }
-
-}
-
-
-/* ESCRITORIO */
-
-@media screen and (min-width:768px) {
-
-    header {
-        background-color: rgb(34, 33, 33);
-        /*Quizas cambiar a un color cafe -> modificar paleta de colores (demasiado oscuro)*/
-        margin-top: 0;
-        padding: 30px;
-        display: grid;
-        grid-template-columns: 40% 52%;
-        /*arreglar logo no responsive*/
-    }
-    
-    .navegacion{
-        display: grid;
-        border: white  5px double;
-        color: white;
-        background-color: rgb(41, 40, 40);
-        list-style: none;
-        font-size: large;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        top: 30px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 0,5fr;
-        justify-items: center;
-        align-items: center;
-    }
-    .imagen{
-        width: 45vw;
-        margin-top: 1vw;
-        margin-left: 1vw;
-        margin-right: 1vw;
-        border-radius: 5px;
-        transition-property: all;
-        transition-duration: 0.25s;
-    }
-    
-    .imagen:hover{ /*ARREGLAR SUPERPOSICIÓN DE TARJETA (SOLUCIONADO)*/
-        transform: scale(1.1);
-        z-index: 1;
-    }
-
-    .descripcion{
-        width: 40vw;
-        height: fit-content;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: rgb(204, 148, 75);
-        border-radius: 5px;
-        margin-top: 2vh;
-        text-align: center;
-    }
-    
-    .cuerpo{
-        display: grid;
-        justify-items: center;
-        justify-content: center;
-        grid-template-columns: 45vw 45vw;
-        grid-template-rows: 100vh 100vh;
-        grid-row-gap: 1vh;
-        grid-column-gap: 3vw;
-    }
-    
-    .cuerpoEmpre{
-        display:flex;
-        flex-direction: row;
-        column-gap: 3vw;
-        margin-left: 3vw;
-        margin-top: 3vh;
-        margin-right: 3vw;
-        align-items: center;
-    }
-    
-}
+    text-align: center;
+    border: 2px solid #dfa436;
+    margin-top: 2vh;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    height: fit-content; }
+  .cuerpoServ {
+    display: grid;
+    grid-template-rows: 7vh 40vh 40vh 5vh 40vh 40vh;
+    grid-row-gap: 2vh;
+    justify-content: center; } }

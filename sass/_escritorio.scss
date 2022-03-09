@@ -1,0 +1,60 @@
+@media screen and (min-width:768px){
+    header {
+        background-color: rgb(34, 33, 33);
+        margin-top: 0;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 40% 52%;
+        /*arreglar logo no responsive*/
+        .navegacion{
+            display: grid;
+            border: white  5px double;
+            color: white;
+            background-color: rgb(41, 40, 40);
+            list-style: none;
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            top: 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 0,5fr;
+            justify-items: center;
+            align-items: center;
+            /*li hereda propiedades del padre*/
+        }
+    }
+
+    .imagen{
+        width: 45vw;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        border-radius: 5px;
+        transition-property: all;
+        transition-duration: 0.25s;
+        &:hover{/*ARREGLAR SUPERPOSICIÓN DE TARJETA (SOLUCIONADO)*/
+            transform: scale(1.1);
+            z-index: 1;
+        }
+    }
+
+    .cuerpo{
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 100vh 100vh;
+        grid-row-gap: 1vh;
+        grid-column-gap: 3vw;
+    }
+    
+    .cuerpoEmpre{
+        display:flex;
+        flex-direction: row;
+        column-gap: 3vw;
+        margin-left: 3vw;
+        margin-top: 3vh;
+        margin-right: 3vw;
+        align-items: center;
+    }
+}    
