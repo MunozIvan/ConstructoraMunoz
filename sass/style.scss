@@ -1,4 +1,10 @@
 @import "escritorio";
+@import "movil";
+
+@mixin size ($altura,$ancho) {
+    height: $altura;
+    width: $ancho;
+}
 
 *{
     padding: 0;
@@ -6,12 +12,15 @@
 }
 
 
-/*CAMBIAR COSAS OBSOLETAS POR EL BOOTSTRAP*/
+/*CAMBIAR COSAS OBSOLETAS POR EL BOOTSTRAP ->hecho*/
 
-.capa{ /*al final no use una imagen por debajo, pero me gusto el tono que le dió*/
+$estilo:( /*mapget (ejemplo un poco forzado)*/
+    fuente:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,
+);
+
+.capa{ /*filtro oscuro*/
     position: fixed;
-    width: 100%;
-    height: 100vh;
+    @include size(100vh,100% );
     background: rgba(143, 138, 138, 0.253);
     z-index: -1;
     top: 0;left: 0;
@@ -19,57 +28,34 @@
 
 body{
     background-color: white;
+    min-height: 100%;/*no funciona en contacto?*/
 }
 
-footer {
+footer { /*poner redes en color blanco*/
+    margin-top: 4vh;
     margin-bottom: 0px;
-    padding-top: 3%;
-    background-color: rgb(22, 18, 18);
-    margin-top: 3%;
-    /*agregar redes sociales (usando flexbox )*/
 }
 
-.discl{
-    font-size: large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    justify-self: center;
-    align-self: center;
-}
-
-/*AGREGAR ICONO (fixed) PARA VOLVER ARRIBA DE LA PÁGINA*/
-
-.titulo{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: darkgrey ;
-    font-size: large;
-    text-align: left;
-    padding: 3vh;
-}
-
-a{
-    text-decoration: none;
-    color:blueviolet;
-}
-/* VER QUE COLOR QUEDA MEJOR 
-li{
-    text-decoration: none;
-    color:ghostwhite;
-}
-*/
 .division{
-    display: flex;
+    margin-top: 3vh;
     align-content: center;
-    justify-content: center;
+    text-align: center;
+    justify-self: center;
     font-size:large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: map-get($estilo , $fuente )
 }
 
 .titulo{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    @extend .division;
     font-size:x-large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-content: center;
+    padding: 3vh;
+    margin-top: 0;
+    background-color: darkgrey ;
+}
+
+.descripcion{
+    width: 40vw;
 }
 
 .cuerpoDiscl{
@@ -99,69 +85,9 @@ li{
 }
 
 .cuerpoCont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 5vh;
-    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
-@media screen and (min-width:0px) and (max-width:767px){
-    header {
-        background-color: rgb(34, 33, 33);
-        margin-top: 0;
-        padding: 30px;
-        display: grid;
-        grid-template-rows: 40% 52%;
-        /*Buscar un logo que entre en el header*/
-        /*BUSCAR ICONOS PARA HEADER Y FOOTER*/
-    }
-    
-    .navegacion{
-        display: grid;
-        border: white  5px double;
-        color: white;
-        background-color: rgb(41, 40, 40);
-        list-style: none;
-        font-size: large;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        top: 30px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-column-gap: 0,5fr;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .imagen{
-        width: 80vw;
-        margin-left: 1vw;
-        margin-right: 1vw;
-        border-radius: 5px;
-    }
-    
-    .cuerpo{
-        display: grid;
-        grid-template-rows: 40vh 40vh 40vh 40vh;
-        grid-row-gap: 4vh;
-        justify-content: center;
-    }
-    
-    .division{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
-        border: 2px solid rgb(223, 164, 54);
-        margin-top:2vh;
-        margin-right: 3vw;
-        margin-left: 3vw;
-        height:fit-content;
-    }
-    .cuerpoServ{
-        display: grid;
-        grid-template-rows:  7vh 40vh 40vh 5vh 40vh 40vh;
-        grid-row-gap: 2vh;
-        justify-content: center;
-    }
-
-}

@@ -1,30 +1,7 @@
 @media screen and (min-width:768px){
-    header {
-        background-color: rgb(34, 33, 33);
-        margin-top: 0;
-        padding: 30px;
-        display: grid;
-        grid-template-columns: 40% 52%;
-        /*arreglar logo no responsive*/
-        .navegacion{
-            display: grid;
-            border: white  5px double;
-            color: white;
-            background-color: rgb(41, 40, 40);
-            list-style: none;
-            font-size: large;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            top: 30px;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-column-gap: 0,5fr;
-            justify-items: center;
-            align-items: center;
-            /*li hereda propiedades del padre*/
-        }
-    }
-
+   
     .imagen{
+        justify-self: center;
         width: 45vw;
         margin-top: 1vw;
         margin-left: 1vw;
@@ -39,11 +16,12 @@
     }
 
     .cuerpo{
+        margin-top: 5vh;
         display: grid;
         justify-items: center;
         justify-content: center;
         grid-template-columns: 45vw 45vw;
-        grid-template-rows: 100vh 100vh;
+        grid-template-rows: 90vh 90vh 90vh;
         grid-row-gap: 1vh;
         grid-column-gap: 3vw;
     }
@@ -55,6 +33,17 @@
         margin-left: 3vw;
         margin-top: 3vh;
         margin-right: 3vw;
+        align-items: center;
+    }
+    .cuerpoObras{
+        display: flex;
+        flex-direction: row;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        justify-content: center;
+        column-gap: 3vw;
         align-items: center;
     }
 }    
