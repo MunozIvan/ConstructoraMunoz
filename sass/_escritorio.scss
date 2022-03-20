@@ -1,7 +1,13 @@
 @media screen and (min-width:768px){
+
+    .descripcion{
+        width: 40vw;
+    }
    
     .imagen{
         justify-self: center;
+        justify-content: center;
+        justify-items: center;
         width: 45vw;
         margin-top: 1vw;
         margin-left: 1vw;
@@ -35,6 +41,7 @@
         margin-right: 3vw;
         align-items: center;
     }
+
     .cuerpoObras{
         display: flex;
         flex-direction: row;
@@ -45,5 +52,8 @@
         justify-content: center;
         column-gap: 3vw;
         align-items: center;
+        .carru{
+            width: 75vw;
+        }
     }
 }    

@@ -14,9 +14,10 @@
 
 /*CAMBIAR COSAS OBSOLETAS POR EL BOOTSTRAP ->hecho*/
 
-$estilo:( /*mapget (ejemplo un poco forzado)*/
-    fuente:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,
-);
+/*
+$estilo:(*/ /*mapget (ejemplo un poco forzado)*//*
+    fuente:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+);*/
 
 .capa{ /*filtro oscuro*/
     position: fixed;
@@ -32,30 +33,32 @@ body{
 }
 
 footer { /*poner redes en color blanco*/
+    position: absolute;
+    width: 100%;
     margin-top: 4vh;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .division{
     margin-top: 3vh;
     align-content: center;
     text-align: center;
-    justify-self: center;
+    text-justify:center;
+    /*justify-self: center;*/
     font-size:large;
-    font-family: map-get($estilo , $fuente )
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .titulo{
     @extend .division;
+    border: 0px !important;
     font-size:x-large;
     align-content: center;
     padding: 3vh;
+    width: 100%;
+    margin-left: 0px;
     margin-top: 0;
     background-color: darkgrey ;
-}
-
-.descripcion{
-    width: 40vw;
 }
 
 .cuerpoDiscl{
@@ -82,12 +85,20 @@ footer { /*poner redes en color blanco*/
     justify-content: center;
     row-gap: 5vh;
     margin-top: 5vh;
-}
+}    
 
 .cuerpoCont{
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 3vw;
     margin-bottom: 3vw;
+    
+}
+.pie{/* fix para pegar el footer abajo cuando la página no tiene 100vh*/
+    position: absolute;
+    width: 100%;
+    margin-top: 4vh;
+    bottom: 0 !important;
+    
 }
 

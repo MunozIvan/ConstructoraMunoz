@@ -1,7 +1,11 @@
 @charset "UTF-8";
 @media screen and (min-width: 768px) {
+  .descripcion {
+    width: 40vw; }
   .imagen {
     justify-self: center;
+    justify-content: center;
+    justify-items: center;
     width: 45vw;
     margin-top: 1vw;
     margin-left: 1vw;
@@ -39,7 +43,9 @@
     margin-bottom: 3vw;
     justify-content: center;
     column-gap: 3vw;
-    align-items: center; } }
+    align-items: center; }
+    .cuerpoObras .carru {
+      width: 75vw; } }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .imagen {
@@ -69,18 +75,52 @@
     display: grid;
     grid-template-rows: 7vh 40vh 40vh 5vh 40vh 40vh;
     grid-row-gap: 2vh;
-    justify-content: center; } }
+    justify-content: center; }
+  .cuerpoObras {
+    display: flex;
+    flex-direction: column;
+    /*
+        margin-left: 5vw;
+        margin-right: 5vw;
+        */
+    margin-top: 5vw;
+    margin-bottom: 13vw;
+    justify-content: center;
+    row-gap: 10vw; }
+    .cuerpoObras .carru {
+      width: 95vw;
+      margin-left: 2vw; }
+    .cuerpoObras .descripcion {
+      margin-left: 5vw;
+      margin-right: 5vw; }
+  .cuerpoEmpre {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vw;
+    margin-left: 3vw;
+    margin-top: 3vh;
+    margin-right: 3vw;
+    justify-items: center; }
+    .cuerpoEmpre .mapa {
+      width: 95vw !important;
+      height: 80vw !important; } }
 
 * {
   padding: 0;
   margin: 0; }
 
 /*CAMBIAR COSAS OBSOLETAS POR EL BOOTSTRAP ->hecho*/
+/*
+$estilo:(*/
+/*mapget (ejemplo un poco forzado)*/
+/*
+    fuente:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+);*/
 .capa {
   /*filtro oscuro*/
   position: fixed;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   background: rgba(143, 138, 138, 0.253);
   z-index: -1;
   top: 0;
@@ -93,26 +133,29 @@ body {
 
 footer {
   /*poner redes en color blanco*/
+  position: absolute;
+  width: 100%;
   margin-top: 4vh;
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
 
 .division, .titulo {
   margin-top: 3vh;
   align-content: center;
   text-align: center;
-  justify-self: center;
+  text-justify: center;
+  /*justify-self: center;*/
   font-size: large;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 .titulo {
+  border: 0px !important;
   font-size: x-large;
   align-content: center;
   padding: 3vh;
+  width: 100%;
+  margin-left: 0px;
   margin-top: 0;
   background-color: darkgrey; }
-
-.descripcion {
-  width: 40vw; }
 
 .cuerpoDiscl {
   display: flex;
@@ -143,3 +186,10 @@ footer {
   margin-right: 5vw;
   margin-top: 3vw;
   margin-bottom: 3vw; }
+
+.pie {
+  /* fix para pegar el footer abajo cuando la página no tiene 100vh*/
+  position: absolute;
+  width: 100%;
+  margin-top: 4vh;
+  bottom: 0 !important; }
